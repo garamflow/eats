@@ -24,3 +24,12 @@
    - DELETE `/carts/foods/{id}`
 7. 상품 주문 API
    - POST `/orders/foods/{id}`
+
+## 3) DB 테이블
+### (1) 상품 (음식)
+| 필드          | 타입           | 키       |
+|-------------|--------------|---------|
+| id          | int          | PRIMARY |
+| name        | varchar(100) |         |
+| price       | int          |         |
+| description | text         |         |
