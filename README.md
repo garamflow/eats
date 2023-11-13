@@ -15,9 +15,9 @@
 2. 상품 개별 조회 API
    - GET `/foods/{id}`
 3. 상품 등록 API
-   - POST `/store/foods/{id}`
+   - POST `/foods/{id}`
 4. 상품 삭제 API
-   - DELETE `/store/foods/{id}`
+   - DELETE `/foods/{id}`
 5. 장바구니 등록 API
    - POST `/carts/foods/{id}`
 6. 장바구니 삭제 API
@@ -33,3 +33,5 @@
 | name        | varchar(100) |         |
 | price       | int          |         |
 | description | text         |         |
+| createdDate | Date         |         |
+| updatedDate | Date         |         |
