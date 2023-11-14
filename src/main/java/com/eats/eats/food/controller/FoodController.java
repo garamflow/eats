@@ -30,13 +30,13 @@ public class FoodController {
 
     // 상품 등록
     @PostMapping("/foods/{id}")
-    public Food addFood(@PathVariable Long id,@PathVariable Food food) {
+    public Food addFood(@PathVariable Long id, Food food) {
         return foodServiceImpl.addFood(id, food);
     }
 
     // 상품 수정
     @PutMapping("/foods/{id}")
-    public Food updateFood(@PathVariable Long id, @PathVariable Food food) {
+    public Food updateFood(@PathVariable Long id, Food food) {
         return foodServiceImpl.updateFood(id, food);
     }
 
