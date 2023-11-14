@@ -18,11 +18,13 @@
    - POST `/foods/{id}`
 4. 상품 삭제 API
    - DELETE `/foods/{id}`
-5. 장바구니 등록 API
+5. 상품 수정 API
+   - PUT `/foods/{id}` 
+6. 장바구니 등록 API
    - POST `/carts/foods/{id}`
-6. 장바구니 삭제 API
+7. 장바구니 삭제 API
    - DELETE `/carts/foods/{id}`
-7. 상품 주문 API
+8. 상품 주문 API
    - POST `/orders/foods/{id}`
 
 ## 3) DB 테이블
