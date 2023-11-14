@@ -10,9 +10,9 @@ import java.util.Optional;
 
 @Service
 public class FoodServiceImpl implements FoodService {
-    @Autowired
     private final FoodMapRepository foodMapRepository;
 
+    @Autowired
     public FoodServiceImpl(FoodMapRepository foodMapRepository) {
         this.foodMapRepository = foodMapRepository;
     }
