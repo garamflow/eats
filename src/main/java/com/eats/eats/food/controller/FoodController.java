@@ -10,9 +10,8 @@ import java.util.Optional;
 
 @RestController
 public class FoodController {
-    @Autowired
     private final FoodServiceImpl foodServiceImpl;
-
+    @Autowired
     public FoodController(FoodServiceImpl foodServiceImpl) {
         this.foodServiceImpl = foodServiceImpl;
     }
