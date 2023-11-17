@@ -1,6 +1,6 @@
 package com.eats.eats.food.controller;
 
-import com.eats.eats.food.Food;
+import com.eats.eats.food.dto.FoodDTO;
 import com.eats.eats.food.service.FoodServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -18,25 +18,25 @@ public class FoodController {
 
     // 상품 전체 조회
     @GetMapping("/foods")
-    public Collection<Food> getAllFoods() {
+    public Collection<FoodDTO> getAllFoods() {
         return foodServiceImpl.getAllFoods();
     }
 
     // 상품 하나 상세 조회
     @GetMapping("/foods/{id}")
-    public Optional<Food> getFoodById(@PathVariable Long id) {
+    public Optional<FoodDTO> getFoodById(@PathVariable Long id) {
         return foodServiceImpl.getFoodById(id);
     }
 
     // 상품 등록
     @PostMapping("/foods/{id}")
-    public Food addFood(@PathVariable Long id, Food food) {
+    public FoodDTO addFood(@PathVariable Long id, FoodDTO food) {
         return foodServiceImpl.addFood(id, food);
     }
 
     // 상품 수정
     @PutMapping("/foods/{id}")
-    public Food updateFood(@PathVariable Long id, Food food) {
+    public FoodDTO updateFood(@PathVariable Long id, FoodDTO food) {
         return foodServiceImpl.updateFood(id, food);
     }
 
