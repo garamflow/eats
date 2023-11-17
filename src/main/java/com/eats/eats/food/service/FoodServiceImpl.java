@@ -1,7 +1,7 @@
 package com.eats.eats.food.service;
 
 import com.eats.eats.food.dto.FoodDTO;
-import com.eats.eats.food.repository.FoodMapRepository;
+import com.eats.eats.food.repository.FoodRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,35 +10,35 @@ import java.util.Optional;
 
 @Service
 public class FoodServiceImpl implements FoodService {
-    private final FoodMapRepository foodMapRepository;
+    private final FoodRepository FoodRepository;
 
     @Autowired
-    public FoodServiceImpl(FoodMapRepository foodMapRepository) {
-        this.foodMapRepository = foodMapRepository;
+    public FoodServiceImpl(FoodRepository foodMapRepository) {
+        this.FoodRepository = foodMapRepository;
     }
 
     @Override
     public Collection<FoodDTO> getAllFoods() {
-        return foodMapRepository.getAllFoods();
+        return FoodRepository.getAllFoods();
     }
 
     @Override
     public Optional<FoodDTO> getFoodById(Long id) {
-        return foodMapRepository.getFoodById(id);
+        return FoodRepository.getFoodById(id);
     }
 
     @Override
     public FoodDTO addFood(Long id, FoodDTO food) {
-        return foodMapRepository.addFood(id, food);
+        return FoodRepository.addFood(id, food);
     }
 
     @Override
     public FoodDTO updateFood(Long id, FoodDTO food) {
-        return foodMapRepository.updateFood(id, food);
+        return FoodRepository.updateFood(id, food);
     }
 
     @Override
     public void deleteFood(Long id) {
-        foodMapRepository.deleteFood(id);
+        FoodRepository.deleteFood(id);
     }
 }
